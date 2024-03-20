@@ -109,7 +109,7 @@ export const TodoWrapper = () => {
                 <button className='todo-btn delete-all-btn' onClick={deleteAllTasks}>Delete All</button>
             </div>
             {/* Render the delete confirmation modal */}
-            <ConfirmationModal isOpen={isDeleteModalOpen} onCancel={cancelDelete} onConfirm={confirmDelete}  />
+            <ConfirmationModal isOpen={isDeleteModalOpen} onCancel={cancelDelete} onConfirm={confirmDelete} message="Are you sure you want to delete this task?"/>
             <ConfirmationModal isOpen={isDeleteAllModalOpen} onCancel={() => setIsDeleteAllModalOpen(false)}  onConfirm={confirmDeleteAll} message="Are you sure you want to delete all tasks?" />
         </div>
     );
