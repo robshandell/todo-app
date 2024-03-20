@@ -21,10 +21,15 @@ export const TodoWrapper = () => {
     }, [todos]);
 
     const addTodo = todo => {
-        const newTodo = { id: uuidv4(), task: todo, completed: false, isEditing: false };
-        const newTodos = [...todos, newTodo];
-        setTodos(newTodos);
-        localStorage.setItem('todos', JSON.stringify(newTodos));
+        // Check if the todo is not null and not an empty string
+        if (todo && todo.trim()) {
+            const newTodo = { id: uuidv4(), task: todo.trim(), completed: false, isEditing: false };
+            const newTodos = [...todos, newTodo];
+            setTodos(newTodos);
+            localStorage.setItem('todos', JSON.stringify(newTodos));
+        } else {
+            alert("Please enter a valid task!");
+        }
     };
 
     const toggleComplete = id => {
