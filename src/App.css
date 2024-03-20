@@ -1,38 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(to bottom right, #F4512C, #5E1B89);
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: "Roboto Slab", serif;
+  color: #F4512C;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TodoWrapper {
+  background: #F8FFFE;
+  margin-top: 10rem;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #FF7F4D;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #9D71BC;
+  font-weight: bold;
+}
+
+.todo-input::placeholder {
+  color: #9D71BC;
+  font-weight: bold;
+}
+
+/* .todo-btn {
+  background: #8758ff;
+  color: black;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+} */
+
+.Todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #5E1B89;
+  color: #F8FFFE;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #FF7F4D;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}
+
+.modal {
+  background-color: #5E1B89;
+  border-radius: 12px;
+  padding: 20px;
+  color: #F8FFFE;
+}
+
+.modal-text {
+  color: #F8FFFE; 
+}
+
+.modal-buttons {
+  margin-top: 0.2rem;
+  padding: 0.55rem;
+  cursor: pointer;
+  margin-right: 0.5rem;  
+}
+
+.modal-buttons button {
+  padding: 5px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: #F4512C;
   color: white;
+  margin: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-buttons button:hover {
+  background-color: #FF7F4D;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-btn,
+.done-all-btn {
+  background: #F4512C;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  margin-right: 0.5rem; 
 }
+
+.done-all-btn {
+  margin-bottom: 1rem; /* Add margin at the bottom to create space */
+}
+
+.todo-btn:hover,
+.done-all-btn:hover,
+.delete-all-btn:hover,
+.add-task-btn:hover {
+  background-color: #FF7F4D;
+}
+
+.logo {
+  position: fixed;
+  margin: 2rem;
+  top: 0;
+  left: 0;
+  height: 45px;
+}
+
+
+
+
